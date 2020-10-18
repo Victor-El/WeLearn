@@ -22,4 +22,4 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Run all tests
-      run: ./gradlew tests
+      run: ./gradlew test
