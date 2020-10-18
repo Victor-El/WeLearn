@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "514383488890",
+    "firebase_url": "https://softwork-learning-platform.firebaseio.com",
+    "project_id": "softwork-learning-platform",
+    "storage_bucket": "softwork-learning-platform.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514383488890:android:f92eda83162284042718c3",
+        "android_client_info": {
+          "package_name": "me.codeenzyme.welearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514383488890-qju0j013ehj24pmgato1378gc9b2fi16.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.codeenzyme.welearn",
+            "certificate_hash": "0f1fec907356fd2556da5709533ccf0a243171de"
+          }
+        },
+        {
+          "client_id": "514383488890-4bavqgcdbponpmk73878pjj7tm598eiv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0NhN0FlSqjYdHL0v7Fypd8ABbP4O94dI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514383488890-4bavqgcdbponpmk73878pjj7tm598eiv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
