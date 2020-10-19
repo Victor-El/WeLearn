@@ -67,6 +67,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage-ktx'
 
     implementation 'com.google.android.material:material:1.2.1'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
 
     implementation 'com.mobsandgeeks:android-saripaar:2.0.3'
 
