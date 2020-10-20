@@ -7,4 +7,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="auth_edit_text">
+        <item name="android:padding">@dimen/standard_padding</item>
+        <item name="android:layout_margin">@dimen/standard_margin</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="auth_btn">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorLight</item>
+        <item name="android:padding">@dimen/standard_padding</item>
+        <item name="android:layout_margin">@dimen/standard_margin</item>
+    </style>
+
 </resources>

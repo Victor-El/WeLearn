@@ -1,18 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:weightSum="8"
+    android:background="@color/colorPrimaryVeryLight"
+    android:gravity="center_horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/standard_padding"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:textColor="@color/colorLight"
+                android:textStyle="bold"
+                android:padding="@dimen/standard_padding"
+                android:text="@string/welcome_back_login"/>
+
+            <EditText
+                android:id="@+id/login_email"
+                android:drawableStart="@drawable/ic_baseline_alternate_email_24"
+                android:drawablePadding="@dimen/standard_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/auth_edit_text_shape"
+                style="@style/auth_edit_text"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:autofillHints="@string/email"
+                android:drawableLeft="@drawable/ic_baseline_alternate_email_24" />
+
+            <EditText
+                android:id="@+id/login_password"
+                android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+                android:drawablePadding="@dimen/standard_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/auth_edit_text_shape"
+                style="@style/auth_edit_text"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:autofillHints="@string/password"
+                android:drawableLeft="@drawable/ic_baseline_vpn_key_24" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/go_to_forgot_password_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="181dp"
-        android:layout_marginLeft="181dp"
-        android:layout_marginTop="344dp"
-        android:text="Login"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/forgot_password"/>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/auth_btn"
+        android:background="@drawable/auth_btn_shape"
+        android:text="@string/login" />
+
+    <TextView
+        android:id="@+id/go_to_register_tv"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/don_t_have_an_account_create_one"
+        android:focusable="true" />
+
+</LinearLayout>

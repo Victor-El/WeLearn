@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 import me.codeenzyme.welearn.view.fragments.LoginFragment
 import me.codeenzyme.welearn.view.fragments.RegisterFragment
 

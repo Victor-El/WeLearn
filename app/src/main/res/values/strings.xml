@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">WeLearn</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="register">Register</string>
+    <string name="agree_with_our_terms_and_conditions">Agree with our <a href="https://codeenzyme.me">terms and conditions</a></string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="create_an_account">Create an account.</string>
+    <string name="already_have_an_account_login"><a href="https://codeenzyme.me">Already have an account? Login</a></string>
+    <string name="don_t_have_an_account_create_one"><a href="https://codeenzyme.me">Don\'t have an account? Create one</a></string>
+    <string name="login">Login</string>
+    <string name="forgot_password"><a href="https://codeenzyme.me">Forgot password?</a></string>
+    <string name="welcome_back_login">Welcome back, Login.</string>
 </resources>
