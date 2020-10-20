@@ -1,4 +1,4 @@
-package me.codeenzyme.welearn.di
+package me.codeenzyme.welearn.di.modules
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth

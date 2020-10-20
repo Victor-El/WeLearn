@@ -13,4 +13,5 @@
     <string name="login">Login</string>
     <string name="forgot_password"><a href="https://codeenzyme.me">Forgot password?</a></string>
     <string name="welcome_back_login">Welcome back, Login.</string>
+    <string name="validate_first_name">First name should be between 2 to 30 characters</string>
 </resources>
