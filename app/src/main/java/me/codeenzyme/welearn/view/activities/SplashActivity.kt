@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import me.codeenzyme.welearn.R
 
 class SplashActivity : AppCompatActivity() {
@@ -12,7 +14,10 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler().postDelayed({
-            startActivity(Intent(this, AuthActivity::class.java))
-        }, 2500)
+            if (Firebase.auth.currentUser != null)
+                startActivity(Intent(this, MainActivity::class.java))
+            else
+                startActivity(Intent(this, AuthActivity::class.java))
+        }, 1500)
     }
 }

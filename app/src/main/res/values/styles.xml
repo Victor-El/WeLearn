@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -18,6 +18,11 @@
         <item name="android:textColor">@color/colorLight</item>
         <item name="android:padding">@dimen/standard_padding</item>
         <item name="android:layout_margin">@dimen/standard_margin</item>
+    </style>
+
+    <style name="circle_profile_image">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
     </style>
 
 </resources>

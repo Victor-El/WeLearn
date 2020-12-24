@@ -3,6 +3,12 @@
     <string name="first_name">First name</string>
     <string name="last_name">Last name</string>
     <string name="register">Register</string>
+    <string name="register_success">Registration Successful</string>
+    <string name="registering">Registering …</string>
+    <string name="creating_account">Creating account …</string>
+    <string name="login_success">Login Successful</string>
+    <string name="logging_in">Logging in …</string>
+    <string name="retrieving_account">Retrieving account …</string>
     <string name="agree_with_our_terms_and_conditions">Agree with our <a href="https://codeenzyme.me">terms and conditions</a></string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -14,4 +20,11 @@
     <string name="forgot_password"><a href="https://codeenzyme.me">Forgot password?</a></string>
     <string name="welcome_back_login">Welcome back, Login.</string>
     <string name="validate_first_name">First name should be between 2 to 30 characters</string>
+    <string name="profile_menu">Profile</string>
+    <string name="home_menu">Home</string>
+    <string name="leaderboard_menu">Leaderboard</string>
+    <string name="settings_menu">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="renew_subscription">Renew Subscription</string>
 </resources>
