@@ -12,6 +12,15 @@
         android:padding="@dimen/standard_padding"
         android:gravity="center_horizontal">
 
+        <FrameLayout
+            android:id="@+id/profile_shimmer_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/profile_shimmer_layout" />
+
+        </FrameLayout>
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profile_image"
             android:layout_width="200dp"
@@ -37,7 +46,7 @@
                 android:text="Display Name"/>
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/profile_first_name"
+                android:id="@+id/profile_display_name"
                 android:background="@drawable/bounded_text_view_stroke"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,7 +70,7 @@
                 android:text="First Name"/>
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/profile_display_name"
+                android:id="@+id/profile_first_name"
                 android:background="@drawable/bounded_text_view_stroke"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -190,6 +199,13 @@
                 tools:text="Biochemistry"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/subscription_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Subscription expires in 10/20/21"/>
 
 
         <androidx.appcompat.widget.LinearLayoutCompat

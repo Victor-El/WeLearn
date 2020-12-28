@@ -16,6 +16,7 @@ import com.mobsandgeeks.saripaar.ValidationError
 import com.mobsandgeeks.saripaar.Validator
 import com.mobsandgeeks.saripaar.annotation.Email
 import com.mobsandgeeks.saripaar.annotation.Password
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import me.codeenzyme.welearn.R
 import me.codeenzyme.welearn.model.LoginResponse
@@ -25,6 +26,7 @@ import me.codeenzyme.welearn.view.activities.AuthActivity
 import me.codeenzyme.welearn.view.activities.MainActivity
 import me.codeenzyme.welearn.viewmodel.AuthViewModel
 
+@AndroidEntryPoint
 class LoginFragment() : Fragment(), Validator.ValidationListener {
 
     val authViewModel by viewModels<AuthViewModel>()

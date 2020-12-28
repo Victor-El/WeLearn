@@ -10,4 +10,6 @@ data class User(
     val dept: String?,
     val email: String,
     val subscriptionExpiry: Timestamp?,
-)
+) {
+    constructor() : this("", "", null, null, null, "", null)
+}

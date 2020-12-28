@@ -52,6 +52,9 @@ dependencies {
     def nav_version = "2.3.2"
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
+    // Facebook shimmer lib
+    implementation "com.facebook.shimmer:shimmer:0.5.0"
+
     // Lifecycle extension
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 

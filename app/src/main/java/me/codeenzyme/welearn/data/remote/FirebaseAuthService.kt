@@ -7,7 +7,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
 import me.codeenzyme.welearn.R
-import me.codeenzyme.welearn.utils.USERS
+import me.codeenzyme.welearn.utils.USERS_COLLECTION
 import me.codeenzyme.welearn.model.LoginResponse
 import me.codeenzyme.welearn.model.RegisterResponse
 import me.codeenzyme.welearn.model.User
@@ -24,7 +24,7 @@ class FirebaseAuthService @Inject constructor() : AuthService {
             firebaseAuth.currentUser?.updateProfile(userProfileChangeRequest {
                 displayName = "${user.firstName} ${user.lastName}"
             })?.await()
-            firestore.collection(USERS).document(authResult.user!!.uid).set(user).await()
+            firestore.collection(USERS_COLLECTION).document(authResult.user!!.uid).set(user).await()
             firebaseAuth.currentUser?.sendEmailVerification()?.await()
             RegisterResponse.Success(context.getString(R.string.register_success))
         } catch (e: Exception) {
