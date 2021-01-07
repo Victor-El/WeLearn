@@ -18,6 +18,6 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, MainActivity::class.java))
             else
                 startActivity(Intent(this, AuthActivity::class.java))
-        }, 1500)
+        }, 1000)
     }
 }

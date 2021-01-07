@@ -33,4 +33,13 @@
     <string name="profile_not_updated">Profile failed to update</string>
     <string name="updating">Updating ...</string>
     <string name="not_currently_subscribed">Not currently subscribed</string>
+    <string name="network_error">Network error</string>
+    <string name="retry">Retry</string>
+    <string name="department">Department</string>
+    <string name="faculty">Faculty</string>
+    <string name="school">School</string>
+    <string name="email_profile">Email*</string>
+    <string name="last_name_profile">Last Name</string>
+    <string name="first_name_profile">First Name</string>
+    <string name="display_name">Display Name*</string>
 </resources>

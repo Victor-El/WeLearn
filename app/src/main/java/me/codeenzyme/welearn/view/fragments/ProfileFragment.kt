@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
@@ -33,14 +34,14 @@ import java.util.*
 @AndroidEntryPoint
 class ProfileFragment: Fragment() {
 
-    val SELECT_IMAGE_CODE = 1000
+    private val SELECT_IMAGE_CODE = 1000
 
-    lateinit var binding: FragmentProfileBinding
+    private lateinit var binding: FragmentProfileBinding
 
-    var photoUri: Uri? = null
+    private var photoUri: Uri? = null
 
-    val authViewModel by viewModels<AuthViewModel>()
-    val userProfileViewModel by viewModels<UserProfileViewModel>()
+    private val authViewModel by viewModels<AuthViewModel>()
+    private val userProfileViewModel by viewModels<UserProfileViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -115,10 +116,6 @@ class ProfileFragment: Fragment() {
                 showEditDialog((it as TextView).text.toString(), ProfileEditDialogFragment.KEY_LAST_NAME); true
             }
 
-            profileEmail.setOnLongClickListener {
-                showEditDialog((it as TextView).text.toString(), ProfileEditDialogFragment.KEY_EMAIL); true
-            }
-
             profileSchool.setOnLongClickListener {
                 showEditDialog((it as TextView).text.toString(), ProfileEditDialogFragment.KEY_SCHOOL); true
             }
@@ -143,7 +140,10 @@ class ProfileFragment: Fragment() {
                     Log.d("UserProfileFragment", userProfile.displayName)
                     binding.run {
                         if (userProfile.photoUri != null) {
-                            Picasso.get().load(userProfile.photoUri).into(profileImage)
+                            // Picasso.get().load(userProfile.photoUri).into(profileImage)
+                            Glide.with(requireContext())
+                                .load(userProfile.photoUri)
+                                .into(profileImage)
                         }
                         profileDisplayName.text = userProfile.displayName
                         profileFirstName.text = userProfile.user.firstName
