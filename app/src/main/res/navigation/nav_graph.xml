@@ -36,7 +36,7 @@
             android:id="@+id/action_courseTopicsFragment_to_courseContentFragment"
             app:destination="@id/courseContentFragment" />
         <argument
-            android:name="courses"
+            android:name="course"
             app:argType="me.codeenzyme.welearn.model.Course" />
     </fragment>
     <fragment

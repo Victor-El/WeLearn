@@ -34,7 +34,7 @@ class ProfileEditDialogFragment(): DialogFragment() {
         val binding = DialogFragmentProfileEditBinding.inflate(layoutInflater)
         val viewTag = requireArguments().getString(KEY_VIEW_TAG)
         binding.editProfile.setText(requireArguments().getString(KEY_PROFILE_EDIT))
-        val dialog = AlertDialog.Builder(requireContext()).apply {
+        val dialog = AlertDialog.Builder(requireContext(), R.style.ThemeOverlay_MaterialComponents_Dialog).apply {
             setView(binding.root)
             setPositiveButton("Ok") { dialog, _ ->
                 when (viewTag) {

@@ -1,10 +1,13 @@
 package me.codeenzyme.welearn.view.fragments.dialog
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
+import me.codeenzyme.welearn.R
 import me.codeenzyme.welearn.databinding.DialogNoNetworkLayoutBinding
 
 class NetworkErrorDialog: DialogFragment() {

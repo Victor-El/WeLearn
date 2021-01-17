@@ -3,10 +3,8 @@ package me.codeenzyme.welearn.view.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.navigation.ui.setupWithNavController
 import dagger.hilt.android.AndroidEntryPoint
 import me.codeenzyme.welearn.MainNavigationDirections
 import me.codeenzyme.welearn.R
@@ -26,33 +24,36 @@ class MainActivity : AppCompatActivity() {
         navController = (supportFragmentManager.findFragmentById(binding.navHost.id) as NavHostFragment).navController
 
         binding.bottomNav.run {
-            selectedItemId = R.id.bottom_menu_home
+            // used this block when implementing bottom nav listener manually
+            /*selectedItemId = R.id.homeFragment
             setOnNavigationItemSelectedListener {
                 when (it.itemId) {
-                    R.id.bottom_menu_profile -> {
+                    R.id.profileFragment -> {
                         val action = MainNavigationDirections.actionGlobalProfileFragment()
                         navController.navigate(action)
                     }
-                    R.id.bottom_menu_home -> {
+                    R.id.homeFragment -> {
                         val action = MainNavigationDirections.actionGlobalHomeFragment()
                         navController.navigate(action)
                     }
-                    R.id.bottom_menu_leaderboard -> {
+                    R.id.leaderboardFragment -> {
                         val action = MainNavigationDirections.actionGlobalLeaderboardFragment()
                         navController.navigate(action)
                     }
-                    R.id.bottom_menu_settings -> {
+                    R.id.settingsFragment -> {
                         val action = MainNavigationDirections.actionGlobalSettingsFragment()
                         navController.navigate(action)
                     }
                 }
                 true
-            }
+            }*/
+
+            setupWithNavController(navController)
         }
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
-        finishAffinity()
+        // finishAffinity()
     }
 }

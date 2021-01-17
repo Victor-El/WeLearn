@@ -4,29 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/register_fragment_root"
     android:orientation="vertical"
-    android:weightSum="8"
-    android:background="@color/colorPrimaryVeryLight"
     android:gravity="center_horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/standard_padding"
-            android:background="@color/colorPrimary"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="28sp"
-                android:textColor="@color/colorLight"
+                android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
                 android:padding="@dimen/standard_padding"
                 android:text="@string/create_an_account"/>
@@ -96,35 +93,38 @@
                 android:autofillHints="@string/confirm_password"
                 android:drawableLeft="@drawable/ic_baseline_vpn_key_24" />
 
+
+            <!-- Actions: links, buttons -->
+            <CheckBox
+                android:id="@+id/agree_register_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="@dimen/standard_margin"
+                app:buttonTint="@color/colorPrimary"
+                android:text="@string/agree_with_our_terms_and_conditions"/>
+
+            <Button
+                android:id="@+id/register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/auth_btn"
+                android:background="@drawable/auth_btn_shape"
+                android:text="@string/register" />
+
+            <TextView
+                android:id="@+id/go_to_login_tv"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/already_have_an_account_login"
+                android:focusable="true" />
+
         </LinearLayout>
 
     </ScrollView>
-
-    <CheckBox
-        android:id="@+id/agree_register_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:layout_marginTop="@dimen/standard_margin"
-        app:buttonTint="@color/colorPrimary"
-        android:text="@string/agree_with_our_terms_and_conditions"/>
-
-    <Button
-        android:id="@+id/register_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/auth_btn"
-        android:background="@drawable/auth_btn_shape"
-        android:text="@string/register" />
-
-    <TextView
-        android:id="@+id/go_to_login_tv"
-        android:clickable="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/colorPrimary"
-        android:text="@string/already_have_an_account_login"
-        android:focusable="true" />
 
 </LinearLayout>

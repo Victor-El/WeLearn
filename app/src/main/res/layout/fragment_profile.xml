@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="@dimen/standard_padding"
-        android:gravity="center_horizontal">
+        android:padding="@dimen/standard_padding">
 
+        <!-- Shimmer Views -->
         <FrameLayout
             android:id="@+id/profile_shimmer_section"
             android:layout_width="match_parent"
@@ -21,234 +22,273 @@
 
         </FrameLayout>
 
+        <!-- Profile picture view -->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profile_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:padding="@dimen/standard_padding"
             android:scaleType="centerCrop"
-            app:strokeColor="@color/colorPrimary"
-            app:strokeWidth="6dp"
             app:shapeAppearanceOverlay="@style/circle_profile_image"
-            app:srcCompat="@drawable/ic_round_person_trans"/>
+            app:srcCompat="@drawable/ic_round_person_trans"
+             />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <!-- Profile display name -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profile_display_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/standard_margin">
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:text="CodeEnzyme" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:layout_margin="2dp"
-                android:text="@string/display_name"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/profile_display_name"
-                android:background="@drawable/bounded_text_view_stroke"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/profile_props_size"
-                android:padding="@dimen/standard_padding"
-                tools:text="CodeEnzyme"/>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <!-- First name -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/standard_margin">
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:layout_margin="2dp"
-                android:text="@string/first_name_profile"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/profile_first_name"
-                android:background="@drawable/bounded_text_view_stroke"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/profile_props_size"
-                android:padding="@dimen/standard_padding"
-                tools:text="Victor"/>
+                android:layout_margin="@dimen/standard_margin"
+                android:orientation="vertical">
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="@string/first_name_profile"
+                    android:textColor="@color/colorPrimary" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/profile_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bounded_text_view_stroke"
+                    android:padding="@dimen/standard_padding"
+                    android:textSize="@dimen/profile_props_size"
+                    tools:text="Victor" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Last name -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/standard_margin">
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:layout_margin="2dp"
-                android:text="@string/last_name_profile"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/profile_last_name"
-                android:background="@drawable/bounded_text_view_stroke"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/profile_props_size"
-                android:padding="@dimen/standard_padding"
-                tools:text="Elezua"/>
+                android:layout_margin="@dimen/standard_margin"
+                android:orientation="vertical">
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="@string/last_name_profile"
+                    android:textColor="@color/colorPrimary" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/profile_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bounded_text_view_stroke"
+                    android:padding="@dimen/standard_padding"
+                    android:textSize="@dimen/profile_props_size"
+                    tools:text="Elezua" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Email -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/standard_margin">
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:layout_margin="2dp"
-                android:text="@string/email_profile"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/profile_email"
-                android:background="@drawable/bounded_text_view_stroke"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/profile_props_size"
-                android:padding="@dimen/standard_padding"
-                tools:text="victorelezua@gmail.com"/>
+                android:layout_margin="@dimen/standard_margin"
+                android:orientation="vertical">
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="@string/email_profile"
+                    android:textColor="@color/colorPrimary" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/profile_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bounded_text_view_stroke"
+                    android:padding="@dimen/standard_padding"
+                    android:textSize="@dimen/profile_props_size"
+                    tools:text="victorelezua@gmail.com" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- School -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/standard_margin">
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:layout_margin="2dp"
-                android:text="@string/school"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/profile_school"
-                android:background="@drawable/bounded_text_view_stroke"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/profile_props_size"
-                android:padding="@dimen/standard_padding"
-                tools:text="FUTO"/>
+                android:layout_margin="@dimen/standard_margin"
+                android:orientation="vertical">
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="@string/school"
+                    android:textColor="@color/colorPrimary" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/profile_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bounded_text_view_stroke"
+                    android:padding="@dimen/standard_padding"
+                    android:textSize="@dimen/profile_props_size"
+                    tools:text="FUTO" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Faculty -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/standard_margin">
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:layout_margin="2dp"
-                android:text="@string/faculty"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/profile_faculty"
-                android:background="@drawable/bounded_text_view_stroke"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/profile_props_size"
-                android:padding="@dimen/standard_padding"
-                tools:text="SOBS"/>
+                android:layout_margin="@dimen/standard_margin"
+                android:orientation="vertical">
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="@string/faculty"
+                    android:textColor="@color/colorPrimary" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/profile_faculty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bounded_text_view_stroke"
+                    android:padding="@dimen/standard_padding"
+                    android:textSize="@dimen/profile_props_size"
+                    tools:text="SOBS" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Department -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/standard_margin">
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:layout_margin="2dp"
-                android:text="@string/department"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/profile_department"
-                android:background="@drawable/bounded_text_view_stroke"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/profile_props_size"
-                android:padding="@dimen/standard_padding"
-                tools:text="Biochemistry"/>
+                android:layout_margin="@dimen/standard_margin"
+                android:orientation="vertical">
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="@string/department"
+                    android:textColor="@color/colorPrimary" />
 
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/profile_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bounded_text_view_stroke"
+                    android:padding="@dimen/standard_padding"
+                    android:textSize="@dimen/profile_props_size"
+                    tools:text="Biochemistry" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Subscription View -->
         <TextView
             android:id="@+id/subscription_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimaryDark"
-            android:text="Subscription expires in 10/20/21"/>
+            android:text="Subscription expires in 10/20/21"
+            android:textColor="@color/colorPrimaryDark" />
 
-
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <Button
+            android:id="@+id/update_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_margin="@dimen/standard_margin"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="@string/update_profile"
+            app:icon="@drawable/ic_baseline_cloud_upload_24" />
 
-            <Button
-                android:id="@+id/update_profile"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/standard_margin"
-                android:ellipsize="marquee"
-                android:singleLine="true"
-                app:icon="@drawable/ic_baseline_cloud_upload_24"
-                android:text="@string/update_profile"/>
-
-            <Button
-                android:id="@+id/update_subscribe"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:ellipsize="marquee"
-                android:layout_margin="@dimen/standard_margin"
-                app:icon="@drawable/ic_baseline_payment"
-                android:text="@string/renew_subscription"
-                android:singleLine="true" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Button
+            android:id="@+id/update_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_margin"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="@string/renew_subscription"
+            app:icon="@drawable/ic_baseline_payment" />
 
         <Button
             android:id="@+id/logout_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/standard_margin"
-            app:icon="@drawable/ic_round_arrow_back"
-            android:text="@string/logout" />
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/standard_margin"/>
+            android:text="@string/logout"
+            app:icon="@drawable/ic_round_arrow_back" />
 
     </LinearLayout>
 

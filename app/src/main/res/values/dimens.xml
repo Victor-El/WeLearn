@@ -3,4 +3,6 @@
     <dimen name="standard_padding">16dp</dimen>
     <dimen name="standard_margin">16dp</dimen>
     <dimen name="profile_props_size">20sp</dimen>
+    <dimen name="depth">2dp</dimen>
+    <dimen name="profile_image_stroke_width">6dp</dimen>
 </resources>

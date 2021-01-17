@@ -9,4 +9,5 @@
     <color name="colorLightShade">#EEE</color>
     <color name="colorPrimaryVeryLight">#E6E0F1</color>
     <color name="shimmerGrey">#A29EA3</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>

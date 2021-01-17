@@ -3,6 +3,7 @@ package me.codeenzyme.welearn.view.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.ktx.auth
@@ -18,8 +19,15 @@ class AuthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
 
-        if (Firebase.auth.currentUser != null)
+        if (Firebase.auth.currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+
+        findViewById<Toolbar>(R.id.auth_toolbar).run {
+            setSupportActionBar(this)
+            setTitleTextColor(resources.getColor(R.color.colorWhite))
+        }
 
         val authFragmentStatePagerAdapter = AuthFragmentStatePagerAdapter(supportFragmentManager, lifecycle)
         auth_pager.adapter = authFragmentStatePagerAdapter

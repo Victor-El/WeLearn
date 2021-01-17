@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.squareup.picasso.Picasso
 import me.codeenzyme.welearn.R
 import me.codeenzyme.welearn.databinding.CourseItemLayoutBinding
@@ -49,7 +50,10 @@ class CoursesRecyclerViewAdapter(
 
             Glide.with(context)
                 .load(course.thumbnail)
-                .placeholder(R.drawable.ic_round_image)
+                .placeholder(R.drawable.background)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .error(R.drawable.background)
+                .fallback(R.drawable.background)
                 .centerCrop()
                 .into(courseThumbnailView)
 
