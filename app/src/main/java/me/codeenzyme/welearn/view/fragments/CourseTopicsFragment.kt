@@ -1,5 +1,6 @@
 package me.codeenzyme.welearn.view.fragments
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
+import me.codeenzyme.videoplayer.VideoActivity
 import me.codeenzyme.welearn.R
 import me.codeenzyme.welearn.databinding.FragmentCourseTopicsBinding
 import me.codeenzyme.welearn.model.Course
@@ -75,6 +77,12 @@ class CourseTopicsFragment : Fragment() {
             object : TopicsRecyclerViewAdapter.OnTopicsClickListener {
                 override fun onClick(topics: List<Course.Topic>, position: Int) {
                     Snackbar.make(binding.topicsRecyclerView, "Click", Snackbar.LENGTH_LONG).show()
+                    startActivity(
+                        Intent(activity, VideoActivity::class.java)
+                            .putExtra(VideoActivity.VIDEO_TITLE_EXTRA, topics[position].title)
+                            .putExtra(VideoActivity.VIDEO_URL_EXTRA, topics[position].videoUrl)
+                            .putExtra(VideoActivity.VIDEO_MATERIAL_EXTRA, topics[position].materialUrl)
+                    )
                 }
 
                 override fun onClickDownload(topics: List<Course.Topic>, position: Int) {

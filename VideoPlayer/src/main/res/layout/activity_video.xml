@@ -17,6 +17,7 @@
             android:layout_height="0dp"
             android:background="@color/colorBlack"
             app:buffered_color="@color/colorPrimary"
+            app:show_buffering="always"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

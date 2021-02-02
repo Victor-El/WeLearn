@@ -32,12 +32,12 @@
         android:id="@+id/courseTopicsFragment"
         android:name="me.codeenzyme.welearn.view.fragments.CourseTopicsFragment"
         android:label="CourseTopicsFragment" >
-        <action
-            android:id="@+id/action_courseTopicsFragment_to_courseContentFragment"
-            app:destination="@id/courseContentFragment" />
         <argument
             android:name="course"
             app:argType="me.codeenzyme.welearn.model.Course" />
+        <action
+            android:id="@+id/action_courseTopicsFragment_to_courseContentFragment"
+            app:destination="@id/courseContentFragment" />
     </fragment>
     <fragment
         android:id="@+id/courseContentFragment"

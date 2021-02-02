@@ -57,7 +57,7 @@ class HomeFragment : Fragment(), CoursesRecyclerViewAdapter.OnCourseItemClick {
     }
 
     private fun loadData() {
-        viewLifecycleOwner.lifecycleScope.launch {
+        lifecycleScope.launch {
             binding.shimmer.root.isVisible = true
             binding.mainConstrainedContent.isVisible = false
 

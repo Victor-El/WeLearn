@@ -3,7 +3,7 @@
     package="me.codeenzyme.welearn">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activities.AuthActivity"></activity>
+        <activity android:name=".view.activities.VideoActivity"></activity>
+        <activity android:name=".view.activities.AuthActivity" />
         <activity android:name=".view.activities.MainActivity" />
         <activity android:name=".view.activities.SplashActivity">
             <intent-filter>
