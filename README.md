@@ -1,7 +1,7 @@
 # WeLearn
 A video-based Digital Learning Platform
 
-[![Android CI](https://github.com/Victor-El/Wally/actions/workflows/android.yml/badge.svg)](https://github.com/Victor-El/Wally/actions/workflows/android.yml)
+[![Android CI](https://github.com/Victor-El/WeLearn/actions/workflows/android.yml/badge.svg)](https://github.com/Victor-El/WeLearn/actions/workflows/android.yml)
 
 WeLearn is a video-based learning environment that enables students learn their course content and can also download for offline use.
 
@@ -33,7 +33,7 @@ WeLearn is a video-based learning environment that enables students learn their 
 <br>
 <img src="https://res.cloudinary.com/codeenzyme/image/upload/v1619006989/Projects%20ScreenShots/Screenshot_20210110-130404_xda3hf.png" width="30%" vspace="10" hspace="10">
 <img src="https://res.cloudinary.com/codeenzyme/image/upload/v1619006988/Projects%20ScreenShots/Screenshot_20210111-145024_n8jhga.png" width="30%" vspace="10" hspace="10">
-<img src="https://res.cloudinary.com/codeenzyme/image/upload/v1619006988/Projects%20ScreenShots/Screenshot_20210111-145024_n8jhga.png" width="30%" vspace="10" hspace="10">
+<img src="https://res.cloudinary.com/codeenzyme/image/upload/v1619012125/Projects%20ScreenShots/IMG-20210421-WA0022_arkhxj.jpg" width="30%" vspace="10" hspace="10">
 
 ## Author
 Elezua Victor
