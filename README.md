@@ -1,5 +1,5 @@
 # WeLearn
-A video-based Digital Learning Platform
+A video-based Digital Learning Platform.
 
 [![Android CI](https://github.com/Victor-El/WeLearn/actions/workflows/android.yml/badge.svg)](https://github.com/Victor-El/WeLearn/actions/workflows/android.yml)
 
